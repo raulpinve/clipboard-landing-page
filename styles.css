@@ -1,0 +1,349 @@
+
+/* Globals */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+
+    /* Colors */
+    /* Primary */
+    --strongCyan: hsl(171, 66%, 44%);
+    --lightBlue: hsl(233, 100%, 69%);
+
+    /* Neutral */
+    --darkGrayishBlue: hsl(210, 10%, 33%);
+    --GrayishBlue: hsl(201, 11%, 66%);
+}
+
+body{
+    font-size: 18px;
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 1110px;
+    margin: auto;
+    padding: 1.5em;
+}
+
+/* Hero */
+.hero{
+    width: 100%;
+    background-image: url("images/bg-header-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 6.6em;
+}
+
+.hero-logo img{
+    display: block;
+    margin: auto;
+}
+h1, h2, h3, h4{
+    color: var(--darkGrayishBlue);
+    text-align: center;
+    margin-top: 2em;
+}
+h1{
+    font-size: 1.8em;
+}
+h2{
+    font-size: 1.5em;
+}
+h3{
+    font-size: 1.3em;
+}
+h4{
+    font-size: 1.3em;
+}
+p{
+    text-align: center;
+    margin-top: 1em;
+    font-size: .92em;
+    line-height: 1.7;
+    color: var(--GrayishBlue);
+}
+
+/* Buttons */
+.hero-buttons{
+    margin-top: 2em;
+}
+.hero-btn{
+    display: block;
+    text-align: center;    
+    padding: .8em;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+.hero-btn:first-child{
+    margin-bottom: 1.3em;
+}
+.btn-download-ios{
+    background: var(--strongCyan);
+    box-shadow: 0 4px hsl(171deg 68% 36%);
+}
+.btn-download-mac{
+    background: var(--lightBlue);
+    box-shadow: 0 4px hsl(233deg 71% 61%);
+}   
+
+/* Properties */
+.properties{
+    margin-top: 3em;
+}
+.image-properties{
+    display: block;
+    width: 325px;
+    margin: auto;
+    margin-top:3em;
+}
+
+/* Services */
+.services{
+    margin-top: 3.5em;
+}
+.image-services{
+    width: 100%;
+    margin-top: 3em;
+}
+
+/* Workflow */
+.workflow{
+    /* margin-top: 2em; */
+}
+
+.workflow-propertie{
+    margin-top: 3em;
+}
+.workflow-propertie:first-child{
+    margin-top: 4.5em;
+}
+
+.workflow-propertie img{
+    display: block;
+    margin: auto;
+    height: 40px;
+}
+.workflow-propertie h3{
+    margin-top: 1.5em;
+}
+
+/* Enterprises */
+.enterprises .wrapper img{
+    display: block;
+    margin: auto;
+    margin-top: 3.5em;
+    width: 140px;
+}
+
+/* Downloads */
+.downlads{
+    margin-top: 4em;
+}
+
+/* Footer */
+footer{
+    background: #f5f6f8;
+    padding: 1em 0;
+    margin-top: 8.5em;
+}
+.footer-logo img{
+    margin: auto;
+    display: block;
+    width: 55px;
+    height: 55px;
+}
+.footer-links{
+    text-align: center;
+    margin-top: 2.4em;
+}
+.footer-links li{
+    list-style: none;
+    margin-top: 1.7em;
+}
+.footer-links li a{
+    text-decoration: none;
+    color: var(--darkGrayishBlue);
+}
+
+.footer-social{
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    margin: auto;
+    margin-top: 3.2em;
+}
+.footer-social li{
+    list-style: none;
+}
+.footer-social li ion-icon{
+    width: 25px;
+    height: 25px;
+    color: var(--darkGrayishBlue);
+}
+
+/* Media querys */
+@media screen and (min-width: 500px){
+    .wrapper{
+        max-width: 500px;
+    }
+}
+
+
+@media screen and (min-width: 1440px){
+
+    /* Globals */
+    h1{
+        font-size: 2.2em;
+    }
+    h2{
+        font-size: 2em;
+    }
+    p{
+        font-size: 1em;
+        text-align: center;
+        margin: auto;
+        margin-top: 1em;
+        width: 700px;
+    }
+    .hero p{
+        font-size: 1.1em;
+    }
+    .main{
+        overflow-x: hidden;
+    }
+    .wrapper{
+        max-width: 1110px;
+    }
+
+    /* Hero */
+    .hero{
+        background-image: url("images/bg-header-desktop.png");
+    }
+  
+    .hero-buttons{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        width: 470px;
+        margin: auto;
+        margin-top: 2em;
+    }
+    .hero-btn:first-child{
+        margin: 0;
+    }
+    .hero-btn{
+        width: 225px;
+        place-self: center;
+        padding: .7em;
+    }
+    /* Properties */
+    .container-grid-properties{
+        padding-top: 3.5em;
+    }
+    .grid-properties{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* justify-content: space-between; */ 
+        grid-gap: 5em;    
+        position: relative;
+    }
+ 
+    .image-properties{
+        position: relative;
+        left: -30px;
+        width: 730px;
+    }
+    .grid-properties h3, .grid-properties p{
+        text-align: left;
+        width: 330px;
+        margin: initial;
+        margin-top: .7em;
+    }
+    .grid-properties p{
+        font-size: .85em;
+    }
+
+    /* Services */
+    .image-services{
+        margin: auto;
+        display: block;
+        width: 800px;
+        margin-top: 4em;
+    }
+
+    /* Workflow */
+    .workflow-properties{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .workflow-propertie{
+        width: 340px;
+        margin-top: 4em;
+    }
+    .workflow-propertie p{
+        width: auto;
+        font-size: .85em;
+    }
+    .workflow-propertie:first-child{
+        margin-top: 4em;
+    }
+
+    /* Enterprises */
+    .enterprises{
+         margin-top: 2em;
+    }
+    .enterprises .wrapper{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        align-items: center;
+        grid-gap: 1em;
+    }
+    .enterprises img{
+        width: auto;
+    }
+
+    /* Footer */
+    footer .wrapper{
+        display: grid;
+        grid-template-columns: 55px 1fr 120px;
+        align-items: center;
+        grid-gap: 7.3em;
+    }
+    
+    .footer-links{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: left;
+        margin-top: 0;   
+        grid-row-gap: 1.5em;
+    }
+    .footer-links li{
+        margin-top: 0;
+    }
+    .footer-social{
+        margin: 0px;
+    }
+
+    /* Downloads */
+    .downlads{
+        margin-top: 0;
+    }
+    .downlads .hero-buttons{
+        margin-top: 3em;
+    }
+   
+}
+
+@media screen and (min-width: 1800px){
+    .image-properties{
+        position: static;
+        width: 750px;
+        place-self: right ;
+    }
+}
